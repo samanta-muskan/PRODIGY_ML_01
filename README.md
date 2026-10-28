@@ -42,6 +42,15 @@ This repository contains the machine learning tasks completed as part of my inte
   - Model evaluation using accuracy, classification report, and confusion matrix
 - **Notebook:** `Cats_Dogs_SVM.ipynb`
 
+### Task 4: Hand Gesture Recognition using CNN
+
+- **Objective:** Recognize 10 hand gesture classes from images.
+- **Technologies:** Python, TensorFlow, Keras, NumPy, Matplotlib, Scikit-learn.
+- **Dataset:** LeapGestRecog.
+- **Model:** Convolutional Neural Network (CNN).
+- **Evaluation:** Held-out test set containing subjects 08 and 09.
+- **Notebook:** [Hand Gesture Recognition using CNN](./Hand_Gesture_Recognition_CNN.ipynb)
+
 ## Technologies Used
 
 - Python

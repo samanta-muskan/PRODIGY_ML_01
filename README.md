@@ -51,6 +51,82 @@ This repository contains the machine learning tasks completed as part of my inte
 - **Evaluation:** Held-out test set containing subjects 08 and 09.
 - **Notebook:** [Hand Gesture Recognition using CNN](./Hand_Gesture_Recognition_CNN.ipynb)
 
+## Task 5: Indian Food Recognition and Calorie Estimation
+
+### 📌 Project Overview
+This project uses deep learning and transfer learning to recognize Indian food items from images and estimate their calorie content based on the predicted food category and user-provided serving weight.
+
+The system is designed to help users understand their food choices and track approximate dietary intake.
+
+### 🎯 Objectives
+- Recognize Indian food items from uploaded images.
+- Classify images into food categories available in the dataset.
+- Use a pretrained MobileNetV2 model for image classification.
+- Estimate calories using a food nutrition lookup table.
+- Allow users to specify serving weight in grams.
+- Evaluate model performance using test accuracy and other classification metrics.
+
+### 📂 Dataset
+**Indian Food Images Dataset**
+
+- Source: [Kaggle — Indian Food Images](https://www.kaggle.com/datasets/iamsouravbanerjee/indian-food-images-dataset)
+- Observed categories: 80
+- Observed images: approximately 4,000
+- Images observed per category: 50
+- Image type: Food photographs
+
+The dataset was inspected before training to identify the available categories and image structure.
+
+### 🛠️ Technologies Used
+- Python
+- TensorFlow and Keras
+- MobileNetV2
+- NumPy
+- Pandas
+- Matplotlib
+- Scikit-learn
+- Google Colab
+
+### ⚙️ Methodology
+1. Inspect the dataset and identify food categories.
+2. Split the images into training, validation, and testing sets.
+3. Resize images to 224 × 224 pixels and preprocess them for MobileNetV2.
+4. Use ImageNet-pretrained MobileNetV2 as the feature extraction backbone.
+5. Train a classification head to recognize the food categories.
+6. Evaluate the model on held-out test images.
+7. Predict food categories from uploaded images.
+8. Estimate calories using a nutrition lookup table and user-provided serving weight.
+
+### 📊 Model Evaluation
+The model is evaluated using:
+- Test accuracy
+- Training and validation accuracy
+- Training and validation loss
+- Additional classification metrics, where implemented
+
+**Test accuracy:** Add the actual test accuracy after running the evaluation cell.
+
+### 🍽️ Calorie Estimation
+Estimated calories are calculated using:
+
+`Estimated Calories = (Calories per 100 g × Serving Weight in g) / 100`
+
+The calorie result is approximate and depends on the accuracy of the nutrition data, ingredients, recipe, and portion weight. Food-image classification alone cannot reliably determine the weight or exact calorie content of a meal.
+
+### 🚀 Future Improvements
+- Add verified nutrition values for all supported food categories.
+- Build a Streamlit web application for image upload and calorie estimation.
+- Add daily calorie tracking and meal history.
+- Improve classification performance through fine-tuning and data augmentation.
+- Explore portion-size estimation using suitable image and depth information.
+
+### 📁 Notebook
+`Food_Recognition_Calorie_Estimation.ipynb`
+
+### ⚠️ Disclaimer
+This project is intended for educational purposes. Calorie estimates are approximate and should not be treated as precise nutritional or medical advice.
+
+
 ## Technologies Used
 
 - Python
